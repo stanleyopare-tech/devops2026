@@ -4,18 +4,16 @@ on:
   - push
 
 jobs: 
-  first_job: 
-    name: My updated job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v6
-        
-      - name: Updated Welcome Messagess
-        run: echo "Welcome to the CICD world with Github Action"
-
-      - name: List Files 
-        run: ls
-
-      - name: Display current worlking directory
-        run: pwd
+    first_job: 
+        name: DevOps First Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v6
+            - name: List and Read files
+              run: |
+                echo "My first GitHub Actions Job"
+                ls -la
+                cat happy.txt
+                cat dockerfile
+      
